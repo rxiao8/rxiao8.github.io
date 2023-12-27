@@ -55,8 +55,10 @@
         //   .reverse();
 
         const values = dateValues.map((c) => c.value);
-        const maxValue = d3.max(values);
-        const minValue = d3.min(values);
+        // const maxValue = d3.max(values);
+        // const minValue = d3.min(values);
+        const maxValue = 5;
+        const minValue = 0;
 
         const cellSize = 15;
         const yearHeight = cellSize * 7;
@@ -140,6 +142,8 @@
         const categories = [...Array(categoriesCount)].map((_, i) => {
           const upperBound = (maxValue / categoriesCount) * (i + 1);
           const lowerBound = (maxValue / categoriesCount) * i;
+          // const upperBound = 5;
+          // const lowerBound = 0;
 
           return {
             upperBound,
